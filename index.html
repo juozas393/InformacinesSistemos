@@ -24,8 +24,15 @@
 		.row .col-md-6 img {
         height: 60%; /* Set the height of the images to 100% */
         width: 60%; /* Set the width of the images to 100% */
-        object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+		max-width: auto;
+		max-height: auto;
+        object-fit: contain; /* Maintain aspect ratio and cover the entire container */
     }
+    Navbar {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
 body {
     position: relative; /* Ensure proper positioning for the pseudo-element */
     overflow: hidden; /* Hide any overflow from the pseudo-element */
@@ -43,7 +50,32 @@ body::before {
     background-position: center;
     opacity: 0.1; /* Adjust the opacity as needed */
     z-index: -1; /* Ensure the pseudo-element stays behind the content */
+    
+    /* scrollbar */
 }
+ /* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 10px;
+}
+    /* Content area */
+    .scrollbar {
+        height: 200px;
+        overflow-y: scroll; /* Enable vertical scrollbar */
+        padding: 10px;
+        border: 1px solid #ccc;
+    }
     </style>
 </head>
 <body class="page-background">
@@ -78,27 +110,29 @@ body::before {
     </div>
   </nav>
 
-  
-
+<div style="overflow-y: scroll; height: auto; max-height: 400px;">
   <div id="Index">
     <div class="container my-5">
-        <h1 class="text-center">Lego Houses</h1>
-        <p class="lead text-center mb-5">Discover the world of Lego houses. From classic designs to innovative modern creations, Lego houses bring imagination to life.</p>
+      <h1 class="text-center">Lego Houses</h1>
+      <p class="lead text-center mb-5">Discover the world of Lego houses. From classic designs to innovative modern creations, Lego houses bring imagination to life.</p>
 
-        <div class="row">
-            <div class="col-md-6">
-                <img src="./images/classic lego house.png" alt="Lego House classic" class="img-fluid">
-                <h3 class="mt-3">Classic Lego House</h3>
-                <p>This classic Lego house features a timeless design with a red roof and white walls. It has doors and windows that open, and a cozy interior that can be customized.</p>
-            </div>
-            <div class="col-md-6">
-                <img src="./images/modern lego house.png" alt="Lego House modern" class="img-fluid">
-                <h3 class="mt-3">Modern Lego House</h3>
-                <p>This modern Lego house boasts a sleek design with glass windows and an open-concept layout. The house is a great representation of modern architecture using Lego bricks.</p>
-            </div>
+      <div class="row">
+        <div class="col-md-6">
+          <img src="./images/classic lego house.png" alt="Lego House classic" class="img-fluid">
+          <h3 class="mt-3">Classic Lego House</h3>
+          <p>This classic Lego house features a timeless design with a red roof and white walls. It has doors and windows that open, and a cozy interior that can be customized.</p>
         </div>
+        <div class="col-md-6">
+          <img src="./images/modern lego house.png" alt="Lego House modern" class="img-fluid">
+          <h3 class="mt-3">Modern Lego House</h3>
+          <p>This modern Lego house boasts a sleek design with glass windows and an open-concept layout. The house is a great representation of modern architecture using Lego bricks.</p>
+        </div>
+      </div>
     </div>
   </div>
+</div>
+
+</div>
 
 <!-- Footer -->
 <footer class="text-white bg-dark lowbackground-custom mt-auto fixed-bottom">
@@ -109,6 +143,7 @@ body::before {
         <a href="./aboutUsPage.html" class="btn btn-outline-light btn-sm">Spausti čia</a>
       </div>
   </div>
+</div>
 </footer>
 <!-- End of Footer -->
 
