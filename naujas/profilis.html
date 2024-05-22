@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profilis - Lego Houses</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <style>
+        /* Custom Navbar Color */
+        .navbar-custom {
+            background-color: #E60026 !important;
+        }
+        /* Custom Page Background Color */
+        .page-background {
+            background-color: #FFFFFF;
+        }
+        /* Custom Page Lower info Color */
+        .lowbackground-custom {
+            background-color: #5CC5FD !important;
+        }
+    </style>
+</head>
+<body class="page-background">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Lego Houses</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="./index.html">Pagrindinis</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./forumas.html">Forumas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./profilis.html">Profilis</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./FAQ.html">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./atsiliepimai.html">Atsiliepimai</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./wizard.html">Vedlys</a>
+                    </li>
+                </ul>
+                <a class="btn btn-outline-primary btn-sm mb-2" href="./loginPage.html">Prisijungti</a>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Paieška" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Paieška</button>
+                </form>    
+            </div>
+        </div>
+    </nav>
+
+    <!-- Profilio forma -->
+    <div id="profileForm">
+        <h2>Profilis</h2>
+        <form id="profileFormContent">
+            <label for="userName">Vartotojo vardas:</label>
+            <input type="text" id="userName" name="userName" value="Jonas" readonly>
+            <br><br>
+            <label for="email">El. paštas:</label>
+            <input type="email" id="email" name="email" value="jonas@example.com" readonly>
+            <br><br>
+            <label for="about">Apie mane:</label>
+            <textarea id="about" name="about" rows="4" cols="50" readonly>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</textarea>
+            <br><br>
+            <button type="button" id="editProfileBtn">Redaguoti profilį</button>
+            <button type="submit" id="saveProfileBtn" style="display: none;">Išsaugoti pakeitimus</button>
+        </form>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Funkcija, kuri leidžia redaguoti profilį
+        function editProfile() {
+            document.getElementById("userName").readOnly = false;
+            document.getElementById("email").readOnly = false;
+            document.getElementById("about").readOnly = false;
+            document.getElementById("editProfileBtn").style.display = "none";
+            document.getElementById("saveProfileBtn").style.display = "block";
+        }
+
+        // Redagavimo mygtuko paspaudimo įvykis
+        document.getElementById("editProfileBtn").addEventListener("click", function(event){
+            editProfile();
+        });
+
+        // Formos pateikimo įvykis
+        document.getElementById("profileFormContent").addEventListener("submit", function(event){
+            event.preventDefault(); // Prevent default form submission
+
+            // Čia galite įdėti kodą, kuris išsaugotų pakeitimus, jei to reikia
+
+            // Pašaliname redagavimo galimybę
+            document.getElementById("userName").readOnly = true;
+            document.getElementById("email").readOnly = true;
+            document.getElementById("about").readOnly = true;
+            document.getElementById("editProfileBtn").style.display = "block";
+            document.getElementById("saveProfileBtn").style.display = "none";
+
+            // Galite pridėti kodą, kuris atnaujintų informaciją, jei to reikia
+        });
+    </script>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

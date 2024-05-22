@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forumas - Lego Houses</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <style>
+        /* Custom Navbar Color */
+        .navbar-custom {
+            background-color: #E60026 !important;
+        }
+        /* Custom Page Background Color */
+        .page-background {
+            background-color: #FFFFFF;
+        }
+        /* Custom Page Lower info Color */
+        .lowbackground-custom {
+            background-color: #5CC5FD !important;
+        }
+        body {
+            position: relative;
+            overflow: hidden;
+        }
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-image: url('./images/house-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+            z-index: -1;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 999;
+        }
+        .scrollbar {
+            max-height: 400px;
+            overflow-y: scroll;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body class="page-background">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Lego Houses</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="./index.html">Pagrindinis</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./forumas.html">Forumas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./profilis.html">Profilis</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./FAQ.html">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./atsiliepimai.html">Atsiliepimai</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./wizard.html">Vedlys</a>
+                    </li>
+                </ul>
+                <a class="btn btn-outline-primary btn-sm mb-2" href="./loginPage.html">Prisijungti</a>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Paieška" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Paieška</button>
+                </form>    
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <h1 class="text-center mb-4">Forumas</h1>
+
+        <!-- Forumo tema 1 -->
+        <section class="mb-5">
+            <h2>Tema 1</h2>
+            <div class="scrollbar">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Pirmas vartotojas</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Antras vartotojas</h5>
+                        <p class="card-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Forumo tema 2 -->
+        <section class="mb-5">
+            <h2>Tema 2</h2>
+            <div class="scrollbar">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Trecias vartotojas</h5>
+                        <p class="card-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Ketvirtas vartotojas</h5>
+                        <p class="card-text">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-white bg-dark lowbackground-custom mt-auto fixed-bottom">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5>Kontaktai</h5>
+                    <a href="./aboutUsPage.html" class="btn btn-outline-light btn-sm">Spausti čia</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
